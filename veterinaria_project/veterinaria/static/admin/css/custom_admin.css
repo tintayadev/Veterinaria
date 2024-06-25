@@ -1,0 +1,18 @@
+/* static/admin/css/custom_admin.css */
+
+/* Ejemplo de cambio de color de fondo del panel de navegación */
+body {
+    background-color: #f0f0f0; /* Cambia el color de fondo */
+}
+
+/* Ejemplo de cambio de color de los encabezados de las tablas */
+.module h2, .module caption {
+    background-color: #337ab7; /* Cambia el color de fondo del encabezado */
+    color: #fff; /* Cambia el color del texto */
+}
+
+/* Ejemplo de cambio de color del botón de guardar */
+.submit-row input[type=submit] {
+    background-color: #5cb85c; /* Cambia el color de fondo del botón */
+    border-color: #4cae4c; /* Cambia el color del borde del botón */
+}
