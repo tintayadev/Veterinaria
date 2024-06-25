@@ -1,23 +1,11 @@
 from django.contrib import admin
 from .models import Cirugia, Cita, Consulta, Dueno, Especialidad, Facturacion, Hospitalizacion, Mascota, Tratamiento, Veterinario
 
-# Personalizar el admin site con CSS
-class CustomAdminSite(admin.AdminSite):
-    site_header = 'Administración de Veterinaria U'  # Cambia el encabezado del sitio de administración
-    site_title = 'Veterinaria U'  # Cambia el título que aparece en la pestaña del navegador
 
-admin.site = CustomAdminSite(name='custom_admin')
-
-# Cargar archivos estáticos
-class CustomAdminSite(admin.AdminSite):
-    site_header = 'Administración de Veterinaria U'  # Cambia el encabezado del sitio de administración
-    site_title = 'Veterinaria U'  # Cambia el título que aparece en la pestaña del navegador
-
-admin.site = CustomAdminSite(name='custom_admin')
 
 @admin.register(Cirugia)
 class CirugiaAdmin(admin.ModelAdmin):
-    list_display = ('id_cirugia', 'fecha', 'tipo', 'descripcion', 'id_mascota', 'id_veterinario')
+    list_display = ('id_cirugia', 'fecha', 'tipo', 'descripcion')
     list_filter = ('fecha', 'tipo')
     search_fields = ('id_cirugia', 'tipo', 'id_mascota__nombre', 'id_veterinario__nombre')
 
@@ -67,8 +55,4 @@ class TratamientoAdmin(admin.ModelAdmin):
     list_filter = ('fechainicio', 'fechafin')
     search_fields = ('id_tratamiento', 'descripcion', 'id_mascota__nombre')
 
-@admin.register(Veterinario)
-class VeterinarioAdmin(admin.ModelAdmin):
-    list_display = ('id_veterinario', 'nombre', 'apellidos', 'id_especialidad', 'telefono', 'email')
-    search_fields = ('id_veterinario', 'nombre', 'apellidos', 'id_especialidad__nombre', 'telefono', 'email')
 
