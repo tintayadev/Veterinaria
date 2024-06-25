@@ -2,6 +2,20 @@ from django.contrib import admin
 from .models import Cirugia, Cita, Consulta, Dueno, Especialidad, Facturacion, Hospitalizacion, Mascota, Tratamiento, Veterinario
 
 
+# from django.contrib.admin import AdminSite
+# from django.utils.translation import gettext_lazy as _
+
+# class CustomAdminSite(AdminSite):
+#     site_header = _('Administración de Veterinaria U')
+#     site_title = _('Veterinaria U')
+#     index_title = _('Bienvenido al panel de administración')
+
+#     def each_context(self, request):
+#         context = super().each_context(request)
+#         context['custom_admin_css'] = 'admin/css/custom_admin.css'
+#         return context
+
+# admin_site = CustomAdminSite(name='custom_admin')
 
 @admin.register(Cirugia)
 class CirugiaAdmin(admin.ModelAdmin):
@@ -56,3 +70,5 @@ class TratamientoAdmin(admin.ModelAdmin):
     search_fields = ('id_tratamiento', 'descripcion', 'id_mascota__nombre')
 
 
+admin.site.site_header = 'Administración de Veterinaria Huellitas'
+admin.site.site_title = 'Veterinaria Huellitas'
