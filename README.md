@@ -2,6 +2,14 @@
 
 Este es un proyecto Django para la gestión de una veterinaria, incluyendo administración de cirugías, citas, consultas, dueños, especialidades, facturación, hospitalización, mascotas, tratamientos y veterinarios.
 
+## Documentación
+
+Para obtener más detalles sobre cómo utilizar el sistema, consulta las siguientes guías:
+
+- [Guía de Usuario](docs/guia_usuario.md)
+- [Documentación Técnica](docs/doc_tecnica.md)
+
+
 ## Requisitos
 
 - Python 3.x
@@ -85,4 +93,3 @@ Si deseas contribuir al proyecto, por favor sigue estos pasos:
 3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva característica'`).
 4. Empuja tus cambios a la rama (`git push origin feature/nueva-caracteristica`).
 5. Abre un Pull Request.
-
