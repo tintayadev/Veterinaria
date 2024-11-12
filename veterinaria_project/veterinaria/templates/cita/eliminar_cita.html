@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Cita</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>¿Estás seguro de que quieres eliminar esta cita?</h2>
+        <p>Mascota: {{ cita.id_mascota.nombre }}</p>
+        <p>Motivo: {{ cita.motivo }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn-danger">Eliminar</button>
+            <a href="{% url 'lista_citas' %}" class="btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

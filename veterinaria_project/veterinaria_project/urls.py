@@ -15,8 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from veterinaria.views import lista_citas, lista_mascotas, crear_cita, crear_mascota, editar_cita, editar_mascota, eliminar_cita, eliminar_mascota
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include('veterinaria.urls')),
+    path('mascotas/', lista_mascotas, name='lista_mascotas'),
+    path('mascotas/crear/', crear_mascota, name='crear_mascota'),
+    path('mascotas/editar/<int:pk>/', editar_mascota, name='editar_mascota'),
+    path('mascotas/eliminar/<int:pk>/', eliminar_mascota, name='eliminar_mascota'),
+    path('citas/', lista_citas, name='lista_citas'),
+    path('citas/crear/', crear_cita, name='crear_cita'),
+    path('citas/editar/<int:pk>/', editar_cita, name='editar_cita'),
+    path('citas/eliminar/<int:pk>/', eliminar_cita, name='eliminar_cita'),
 ]

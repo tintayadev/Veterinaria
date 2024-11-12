@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Citas</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Citas</h2>
+        <a href="{% url 'crear_cita' %}" class="btn-primary">Agregar Cita</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Mascota</th>
+                    <th>Dueño</th>
+                    <th>Motivo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cita in citas %}
+                <tr>
+                    <td>{{ cita.fecha }}</td>
+                    <td>{{ cita.hora }}</td>
+                    <td>{{ cita.id_mascota.nombre }}</td>
+                    <td>{{ cita.id_dueno.nombre }}</td>
+                    <td>{{ cita.motivo }}</td>
+                    <td>
+                        <a href="{% url 'editar_cita' cita.pk %}" class="btn-secondary">Editar</a>
+                        <a href="{% url 'eliminar_cita' cita.pk %}" class="btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
