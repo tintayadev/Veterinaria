@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Citas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .date-info {
+            font-size: 12px;
+            text-align: right;
+            margin-top: -10px;
+        }
+        .generated-by {
+            font-size: 12px;
+            text-align: right;
+            margin-top: -5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Reporte de Citas - Veterinaria Huellitas</h1>
+        <div class="date-info">
+            Fecha del reporte: {{ fecha_reporte }}
+        </div>
+        <div class="generated-by">
+            Generado por: {{ generado_por }}
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Mascota</th>
+                <th>Dueño</th>
+                <th>Veterinario</th>
+                <th>Motivo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cita in citas %}
+            <tr>
+                <td>{{ cita.id_cita }}</td>
+                <td>{{ cita.fecha }}</td>
+                <td>{{ cita.hora }}</td>
+                <td>{{ cita.id_mascota.nombre }}</td>
+                <td>{{ cita.id_dueno.nombre }} {{ cita.id_dueno.apellidos }}</td>
+                <td>{{ cita.id_veterinario.nombre }} {{ cita.id_veterinario.apellidos }}</td>
+                <td>{{ cita.motivo }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>© 2024 Veterinaria Huellitas. Todos los derechos reservados.</p>
+    </div>
+</body>
+</html>

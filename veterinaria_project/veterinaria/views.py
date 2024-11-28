@@ -1,10 +1,17 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponse
+from django.template.loader import get_template
+from xhtml2pdf import pisa
 from rest_framework import viewsets
 from .models import Cirugia, Cita, Consulta, Dueno, Especialidad, Facturacion, Hospitalizacion, Mascota, Tratamiento, Veterinario
 from .serializers import (CirugiaSerializer, CitaSerializer, ConsultaSerializer, DuenoSerializer,
                           EspecialidadSerializer, FacturacionSerializer, HospitalizacionSerializer,
                           MascotaSerializer, TratamientoSerializer, VeterinarioSerializer)
-from .forms import CitaForm, MascotaForm
+from .forms import CitaForm, MascotaForm, ReporteForm
+from django.utils import timezone
+from io import BytesIO
+from .utils import render_pdf
+from datetime import datetime
 
 # ViewSet para el modelo Cirugia
 class CirugiaViewSet(viewsets.ModelViewSet):
@@ -127,3 +134,78 @@ def eliminar_cita(request, pk):
         cita.delete()
         return redirect('lista_citas')
     return render(request, 'cita/eliminar_cita.html', {'mascota': cita})
+
+def home(request):
+    return render(request, 'home.html')
+
+
+def generar_reporte_citas(request):
+    # Obtener datos de las citas
+    citas = Cita.objects.select_related('id_mascota', 'id_dueno', 'id_veterinario')
+
+    # Cargar el template HTML
+    template = get_template('reportes/reporte_citas.html')
+
+    # Obtener la fecha actual y el nombre del usuario (en este caso, simplemente un nombre estático)
+    fecha_reporte = timezone.localtime(timezone.now()).strftime('%d/%m/%Y %H:%M:%S')
+
+    generado_por = "Administrador"  # Puedes cambiar esto según el contexto de quien genera el reporte
+
+    # Crear el contexto para el reporte
+    context = {'citas': citas, 'fecha_reporte': fecha_reporte, 'generado_por': generado_por}
+
+    # Renderizar el HTML con el contexto
+    html = template.render(context)
+
+    # Generar el PDF
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'inline; filename="reporte_citas.pdf"'
+    pisa_status = pisa.CreatePDF(html, dest=response)
+
+    # Manejar errores
+    if pisa_status.err:
+        return HttpResponse('Ocurrió un error al generar el PDF', status=500)
+    
+    return response
+
+def generar_reporte(request):
+    template = get_template('reporte.html')
+    if request.method == 'POST':
+        form = ReporteForm(request.POST)
+        if form.is_valid():
+            fecha_inicio = form.cleaned_data['fecha_inicio']
+            fecha_fin = form.cleaned_data['fecha_fin']
+            tipo_mascota = form.cleaned_data['tipo_mascota']
+
+            # Si se selecciona un tipo de mascota, filtrar por ese tipo
+            if tipo_mascota:
+                mascotas = Mascota.objects.filter(especie=tipo_mascota)
+            else:
+                mascotas = Mascota.objects.all()
+
+            # Aquí pasamos los datos al template de reporte
+            context = {
+                'mascotas': mascotas,
+                'fecha_inicio': fecha_inicio,
+                'fecha_fin': fecha_fin,
+                'tipo_mascota': tipo_mascota,
+            }
+
+            # Renderizar el HTML con el contexto
+            html = template.render(context)
+
+            # Generar el PDF
+            response = HttpResponse(content_type='application/pdf')
+            response['Content-Disposition'] = f'inline; filename="reporte-{tipo_mascota}-{fecha_inicio}.pdf"'
+            pisa_status = pisa.CreatePDF(html, dest=response)
+
+            # Manejar errores
+            if pisa_status.err:
+                return HttpResponse('Ocurrió un error al generar el PDF', status=500)
+            
+            return response
+            
+    else:
+        form = ReporteForm()
+
+    return render(request, 'reporte_form.html', {'form': form})

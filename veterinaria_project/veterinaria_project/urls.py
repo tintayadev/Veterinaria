@@ -16,10 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from veterinaria.views import lista_citas, lista_mascotas, crear_cita, crear_mascota, editar_cita, editar_mascota, eliminar_cita, eliminar_mascota
+from veterinaria.views import lista_citas, lista_mascotas, crear_cita, crear_mascota, editar_cita, editar_mascota, eliminar_cita, eliminar_mascota, home, generar_reporte_citas, generar_reporte
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='home'),
     path('api/', include('veterinaria.urls')),
     path('mascotas/', lista_mascotas, name='lista_mascotas'),
     path('mascotas/crear/', crear_mascota, name='crear_mascota'),
@@ -29,4 +30,6 @@ urlpatterns = [
     path('citas/crear/', crear_cita, name='crear_cita'),
     path('citas/editar/<int:pk>/', editar_cita, name='editar_cita'),
     path('citas/eliminar/<int:pk>/', eliminar_cita, name='eliminar_cita'),
+    path('reportes/citas/', generar_reporte_citas, name='reporte_citas'),
+    path('generar-reporte/', generar_reporte, name='generar_reporte'),
 ]

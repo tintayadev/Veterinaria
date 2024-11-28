@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte Generado</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .date-info {
+            font-size: 12px;
+            text-align: right;
+            margin-top: -10px;
+        }
+        .generated-by {
+            font-size: 12px;
+            text-align: right;
+            margin-top: -5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            color: #555;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Reporte Generado</h2>
+        <p><strong>Fecha Inicio:</strong> {{ fecha_inicio }}</p>
+        <p><strong>Fecha Fin:</strong> {{ fecha_fin }}</p>
+        <p><strong>Especie seleccionada:</strong> {{ tipo_mascota }}</p>
+
+        <h3>Listado de Mascotas:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                    <th>Edad</th>
+                    <th>Peso</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mascota in mascotas %}
+                    <tr>
+                        <td>{{ mascota.nombre }}</td>
+                        <td>{{ mascota.raza }}</td>
+                        <td>{{ mascota.edad }}</td>
+                        <td>{{ mascota.peso }}</td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="4">No se encontraron mascotas para los criterios seleccionados.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
