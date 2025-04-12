@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Especialidades</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2>Lista de Especialidades</h2>
+    <a href="{% url 'crear_especialidad' %}" class="btn-primary">Agregar Especialidad</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for especialidad in especialidades %}
+        <tr>
+          <td>{{ especialidad.nombre }}</td>
+          <td>{{ especialidad.descripcion }}</td>
+          <td>
+            <a href="{% url 'editar_especialidad' especialidad.pk %}" class="btn-secondary">Editar</a>
+            <a href="{% url 'eliminar_especialidad' especialidad.pk %}" class="btn-danger">Eliminar</a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="3">No hay especialidades registradas.</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="{% url 'home' %}" class="nav-link">Volver al Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Especialidad</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2>Editar Especialidad</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn-primary">Actualizar</button>
+      <a href="{% url 'lista_especialidades' %}" class="btn-secondary">Cancelar</a>
+    </form>
+  </div>
+</body>
+</html>

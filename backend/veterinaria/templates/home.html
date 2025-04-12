@@ -1,50 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinaria Huellitas - Inicio</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        .header, .footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-        }
-        .container {
-            margin: 20px auto;
-            max-width: 800px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .nav-link {
-            display: block;
-            margin: 15px 0;
-            text-align: center;
-            font-size: 1.2em;
-            text-decoration: none;
-            color: #4CAF50;
-            padding: 10px;
-            border: 1px solid #4CAF50;
-            border-radius: 5px;
-        }
-        .nav-link:hover {
-            background-color: #4CAF50;
-            color: white;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
+        /* (Tus estilos actuales) */
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+        .header, .footer { background-color: #4CAF50; color: white; text-align: center; padding: 10px 0; }
+        .container { margin: 20px auto; max-width: 800px; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        .nav-link { display: block; margin: 15px 0; text-align: center; font-size: 1.2em; text-decoration: none; color: #4CAF50; padding: 10px; border: 1px solid #4CAF50; border-radius: 5px; }
+        .nav-link:hover { background-color: #4CAF50; color: white; }
+        .section { margin-bottom: 20px; }
     </style>
 </head>
 <body>
@@ -55,29 +24,32 @@
     <div class="container">
         <div class="section">
             <h2>Bienvenido a la Plataforma de Gestión Veterinaria</h2>
-            <p>Con esta plataforma, puedes gestionar información sobre mascotas, citas, y mucho más de forma eficiente y fácil de usar.</p>
+            <p>Administra la información de mascotas, citas, cirugías, consultas, dueños, especialidades, facturación, hospitalizaciones, tratamientos y veterinarios.</p>
         </div>
         <div class="section">
-            <h3>Navegación rápida</h3>
+            <h3>Navegación Rápida</h3>
             <a href="{% url 'lista_mascotas' %}" class="nav-link">Gestión de Mascotas</a>
             <a href="{% url 'lista_citas' %}" class="nav-link">Gestión de Citas</a>
+            <a href="{% url 'lista_duenos' %}" class="nav-link">Gestión de Dueños</a>
+            <a href="{% url 'lista_cirugias' %}" class="nav-link">Gestión de Cirugías</a>
+            <a href="{% url 'lista_consultas' %}" class="nav-link">Gestión de Consultas</a>
+            <a href="{% url 'lista_especialidades' %}" class="nav-link">Gestión de Especialidades</a>
+            <a href="{% url 'lista_veterinarios' %}" class="nav-link">Gestión de Veterinarios</a>
         </div>
         <div class="section">
-            <h3>Acceso a administración</h3>
+            <h3>Administración</h3>
             <a href="/admin/" class="nav-link">Ingresar como Admin</a>
         </div>
         <div class="section">
-            <h3>Generar Reporte de Citas</h3>
+            <h3>Reportes</h3>
             <a href="{% url 'reporte_citas' %}" class="nav-link">Generar PDF de Citas</a>
-        </div>
-        <div class="section">
-            <h3>Generar Reporte</h3>
             <a href="{% url 'generar_reporte' %}" class="nav-link">Generar Reporte</a>
         </div>
     </div>
     
     <div class="footer">
-        <p>© 2024 Veterinaria Huellitas. Todos los derechos reservados.</p>
+        <p>© 2025 Veterinaria Huellitas. Todos los derechos reservados.</p>
     </div>
+    
 </body>
 </html>

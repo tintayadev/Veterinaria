@@ -1,22 +1,18 @@
-"""
-URL configuration for veterinaria_project project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.0/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
-from veterinaria.views import lista_citas, lista_mascotas, crear_cita, crear_mascota, editar_cita, editar_mascota, eliminar_cita, eliminar_mascota, home, generar_reporte_citas, generar_reporte
+from veterinaria.views import (
+    home, lista_mascotas, crear_mascota, editar_mascota, eliminar_mascota,
+    lista_citas, crear_cita, editar_cita, eliminar_cita,
+    lista_cirugias, crear_cirugia, editar_cirugia, eliminar_cirugia,
+    lista_consultas, crear_consulta, editar_consulta, eliminar_consulta,
+    lista_duenos, crear_dueno, editar_dueno, eliminar_dueno,
+    lista_especialidades, crear_especialidad, editar_especialidad, eliminar_especialidad,
+    lista_facturaciones, crear_facturacion, editar_facturacion, eliminar_facturacion,
+    lista_hospitalizaciones, crear_hospitalizacion, editar_hospitalizacion, eliminar_hospitalizacion,
+    lista_tratamientos, crear_tratamiento, editar_tratamiento, eliminar_tratamiento,
+    lista_veterinarios, crear_veterinario, editar_veterinario, eliminar_veterinario,
+    generar_reporte, generar_reporte_citas
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +26,38 @@ urlpatterns = [
     path('citas/crear/', crear_cita, name='crear_cita'),
     path('citas/editar/<int:pk>/', editar_cita, name='editar_cita'),
     path('citas/eliminar/<int:pk>/', eliminar_cita, name='eliminar_cita'),
+    path('cirugias/', lista_cirugias, name='lista_cirugias'),
+    path('cirugias/crear/', crear_cirugia, name='crear_cirugia'),
+    path('cirugias/editar/<int:pk>/', editar_cirugia, name='editar_cirugia'),
+    path('cirugias/eliminar/<int:pk>/', eliminar_cirugia, name='eliminar_cirugia'),
+    path('consultas/', lista_consultas, name='lista_consultas'),
+    path('consultas/crear/', crear_consulta, name='crear_consulta'),
+    path('consultas/editar/<int:pk>/', editar_consulta, name='editar_consulta'),
+    path('consultas/eliminar/<int:pk>/', eliminar_consulta, name='eliminar_consulta'),
+    path('duenos/', lista_duenos, name='lista_duenos'),
+    path('duenos/crear/', crear_dueno, name='crear_dueno'),
+    path('duenos/editar/<int:pk>/', editar_dueno, name='editar_dueno'),
+    path('duenos/eliminar/<int:pk>/', eliminar_dueno, name='eliminar_dueno'),
+    path('especialidades/', lista_especialidades, name='lista_especialidades'),
+    path('especialidades/crear/', crear_especialidad, name='crear_especialidad'),
+    path('especialidades/editar/<int:pk>/', editar_especialidad, name='editar_especialidad'),
+    path('especialidades/eliminar/<int:pk>/', eliminar_especialidad, name='eliminar_especialidad'),
+    path('facturaciones/', lista_facturaciones, name='lista_facturaciones'),
+    path('facturaciones/crear/', crear_facturacion, name='crear_facturacion'),
+    path('facturaciones/editar/<int:pk>/', editar_facturacion, name='editar_facturacion'),
+    path('facturaciones/eliminar/<int:pk>/', eliminar_facturacion, name='eliminar_facturacion'),
+    path('hospitalizaciones/', lista_hospitalizaciones, name='lista_hospitalizaciones'),
+    path('hospitalizaciones/crear/', crear_hospitalizacion, name='crear_hospitalizacion'),
+    path('hospitalizaciones/editar/<int:pk>/', editar_hospitalizacion, name='editar_hospitalizacion'),
+    path('hospitalizaciones/eliminar/<int:pk>/', eliminar_hospitalizacion, name='eliminar_hospitalizacion'),
+    path('tratamientos/', lista_tratamientos, name='lista_tratamientos'),
+    path('tratamientos/crear/', crear_tratamiento, name='crear_tratamiento'),
+    path('tratamientos/editar/<int:pk>/', editar_tratamiento, name='editar_tratamiento'),
+    path('tratamientos/eliminar/<int:pk>/', eliminar_tratamiento, name='eliminar_tratamiento'),
+    path('veterinarios/', lista_veterinarios, name='lista_veterinarios'),
+    path('veterinarios/crear/', crear_veterinario, name='crear_veterinario'),
+    path('veterinarios/editar/<int:pk>/', editar_veterinario, name='editar_veterinario'),
+    path('veterinarios/eliminar/<int:pk>/', eliminar_veterinario, name='eliminar_veterinario'),
     path('reportes/citas/', generar_reporte_citas, name='reporte_citas'),
     path('generar-reporte/', generar_reporte, name='generar_reporte'),
 ]

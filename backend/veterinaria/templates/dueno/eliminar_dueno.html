@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eliminar Dueño</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>¿Estás seguro de eliminar al dueño?</h2>
+        <p>{{ dueno.nombre }} {{ dueno.apellidos }}</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn-danger">Eliminar</button>
+            <a href="{% url 'lista_duenos' %}" class="btn-secondary">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

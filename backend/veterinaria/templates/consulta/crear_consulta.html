@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Consulta</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2>Agregar Nueva Consulta</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn-primary">Guardar</button>
+      <a href="{% url 'lista_consultas' %}" class="btn-secondary">Cancelar</a>
+    </form>
+  </div>
+</body>
+</html>

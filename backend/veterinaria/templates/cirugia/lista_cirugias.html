@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Cirugías</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Cirugías</h2>
+        <a href="{% url 'crear_cirugia' %}" class="btn-primary">Agregar Cirugía</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Descripción</th>
+                    <th>Mascota</th>
+                    <th>Veterinario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cirugia in cirugias %}
+                <tr>
+                    <td>{{ cirugia.fecha }}</td>
+                    <td>{{ cirugia.tipo }}</td>
+                    <td>{{ cirugia.descripcion }}</td>
+                    <td>{{ cirugia.id_mascota }}</td>
+                    <td>{{ cirugia.id_veterinario }}</td>
+                    <td>
+                        <a href="{% url 'editar_cirugia' cirugia.pk %}" class="btn-secondary">Editar</a>
+                        <a href="{% url 'eliminar_cirugia' cirugia.pk %}" class="btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6">No hay cirugías registradas.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'home' %}" class="nav-link">Volver al Home</a>
+    </div>
+</body>
+</html>

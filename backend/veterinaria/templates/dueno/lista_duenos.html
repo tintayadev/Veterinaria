@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Dueños</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>Lista de Dueños</h2>
+        <a href="{% url 'crear_dueno' %}" class="btn-primary">Agregar Dueño</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for dueno in duenos %}
+                <tr>
+                    <td>{{ dueno.nombre }}</td>
+                    <td>{{ dueno.apellidos }}</td>
+                    <td>{{ dueno.telefono }}</td>
+                    <td>{{ dueno.direccion }}</td>
+                    <td>{{ dueno.email }}</td>
+                    <td>
+                        <a href="{% url 'editar_dueno' dueno.pk %}" class="btn-secondary">Editar</a>
+                        <a href="{% url 'eliminar_dueno' dueno.pk %}" class="btn-danger">Eliminar</a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="6">No hay dueños registrados.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{% url 'home' %}" class="nav-link">Volver al Home</a>
+    </div>
+</body>
+</html>

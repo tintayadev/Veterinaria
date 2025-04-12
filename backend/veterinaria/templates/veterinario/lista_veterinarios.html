@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Veterinarios</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <h2>Lista de Veterinarios</h2>
+    <a href="{% url 'crear_veterinario' %}" class="btn-primary">Agregar Veterinario</a>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Especialidad</th>
+          <th>Teléfono</th>
+          <th>Email</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for veterinario in veterinarios %}
+        <tr>
+          <td>{{ veterinario.nombre }}</td>
+          <td>{{ veterinario.apellidos }}</td>
+          <td>{{ veterinario.id_especialidad.nombre }}</td>
+          <td>{{ veterinario.telefono }}</td>
+          <td>{{ veterinario.email }}</td>
+          <td>
+            <a href="{% url 'editar_veterinario' veterinario.pk %}" class="btn-secondary">Editar</a>
+            <a href="{% url 'eliminar_veterinario' veterinario.pk %}" class="btn-danger">Eliminar</a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="6">No hay veterinarios registrados.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="{% url 'home' %}" class="nav-link">Volver al Home</a>
+  </div>
+</body>
+</html>
