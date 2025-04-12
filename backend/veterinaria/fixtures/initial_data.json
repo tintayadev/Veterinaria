@@ -1,0 +1,1532 @@
+[
+  {
+    "model": "veterinaria.dueno",
+    "pk": 1,
+    "fields": {
+      "nombre": "Juan",
+      "apellidos": "Perez",
+      "telefono": "123456789",
+      "direccion": "Calle Falsa 123",
+      "email": "juan.perez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 2,
+    "fields": {
+      "nombre": "Maria",
+      "apellidos": "Gonzalez",
+      "telefono": "987654321",
+      "direccion": "Avenida Siempre Viva 456",
+      "email": "maria.gonzalez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 3,
+    "fields": {
+      "nombre": "Carlos",
+      "apellidos": "Ramirez",
+      "telefono": "555555555",
+      "direccion": "Boulevard Central 789",
+      "email": "carlos.ramirez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 4,
+    "fields": {
+      "nombre": "Ana",
+      "apellidos": "Lopez",
+      "telefono": "111111111",
+      "direccion": "Calle Luna 1",
+      "email": "ana.lopez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 5,
+    "fields": {
+      "nombre": "Pedro",
+      "apellidos": "Martinez",
+      "telefono": "222222222",
+      "direccion": "Calle Sol 2",
+      "email": "pedro.martinez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 6,
+    "fields": {
+      "nombre": "Lucia",
+      "apellidos": "Diaz",
+      "telefono": "333333333",
+      "direccion": "Calle Estrella 3",
+      "email": "lucia.diaz@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 7,
+    "fields": {
+      "nombre": "Miguel",
+      "apellidos": "Torres",
+      "telefono": "444444444",
+      "direccion": "Calle Mar 4",
+      "email": "miguel.torres@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 8,
+    "fields": {
+      "nombre": "Laura",
+      "apellidos": "Morales",
+      "telefono": "555555555",
+      "direccion": "Calle Viento 5",
+      "email": "laura.morales@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 9,
+    "fields": {
+      "nombre": "Jorge",
+      "apellidos": "Hernandez",
+      "telefono": "666666666",
+      "direccion": "Calle Fuego 6",
+      "email": "jorge.hernandez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 10,
+    "fields": {
+      "nombre": "Sofia",
+      "apellidos": "Fernandez",
+      "telefono": "777777777",
+      "direccion": "Calle Agua 7",
+      "email": "sofia.fernandez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 11,
+    "fields": {
+      "nombre": "Raul",
+      "apellidos": "Garcia",
+      "telefono": "888888888",
+      "direccion": "Calle Nube 8",
+      "email": "raul.garcia@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 12,
+    "fields": {
+      "nombre": "Elena",
+      "apellidos": "Sanchez",
+      "telefono": "999999999",
+      "direccion": "Calle Rayo 9",
+      "email": "elena.sanchez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 13,
+    "fields": {
+      "nombre": "Diego",
+      "apellidos": "Vargas",
+      "telefono": "101010101",
+      "direccion": "Calle Trueno 10",
+      "email": "diego.vargas@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 14,
+    "fields": {
+      "nombre": "Julia",
+      "apellidos": "Rojas",
+      "telefono": "202020202",
+      "direccion": "Calle Tormenta 11",
+      "email": "julia.rojas@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.dueno",
+    "pk": 15,
+    "fields": {
+      "nombre": "Fernando",
+      "apellidos": "Castro",
+      "telefono": "303030303",
+      "direccion": "Calle Relampago 12",
+      "email": "fernando.castro@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 1,
+    "fields": {
+      "nombre": "Fido",
+      "raza": "Labrador",
+      "especie": "Perro",
+      "edad": 5,
+      "peso": "30.5",
+      "sexo": "M",
+      "fechanacimiento": "2019-01-01",
+      "id_dueno": 1
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 2,
+    "fields": {
+      "nombre": "Whiskers",
+      "raza": "Siames",
+      "especie": "Gato",
+      "edad": 3,
+      "peso": "4.3",
+      "sexo": "F",
+      "fechanacimiento": "2020-06-15",
+      "id_dueno": 2
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 3,
+    "fields": {
+      "nombre": "Rex",
+      "raza": "Pastor Alemán",
+      "especie": "Perro",
+      "edad": 7,
+      "peso": "25.0",
+      "sexo": "M",
+      "fechanacimiento": "2017-08-21",
+      "id_dueno": 3
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 4,
+    "fields": {
+      "nombre": "Bella",
+      "raza": "Bulldog",
+      "especie": "Perro",
+      "edad": 4,
+      "peso": "20.0",
+      "sexo": "F",
+      "fechanacimiento": "2020-05-10",
+      "id_dueno": 4
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 5,
+    "fields": {
+      "nombre": "Milo",
+      "raza": "Beagle",
+      "especie": "Perro",
+      "edad": 2,
+      "peso": "10.0",
+      "sexo": "M",
+      "fechanacimiento": "2021-09-14",
+      "id_dueno": 5
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 6,
+    "fields": {
+      "nombre": "Luna",
+      "raza": "Persa",
+      "especie": "Gato",
+      "edad": 3,
+      "peso": "3.5",
+      "sexo": "F",
+      "fechanacimiento": "2020-07-23",
+      "id_dueno": 6
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 7,
+    "fields": {
+      "nombre": "Max",
+      "raza": "Boxer",
+      "especie": "Perro",
+      "edad": 6,
+      "peso": "28.0",
+      "sexo": "M",
+      "fechanacimiento": "2018-03-15",
+      "id_dueno": 7
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 8,
+    "fields": {
+      "nombre": "Coco",
+      "raza": "Chihuahua",
+      "especie": "Perro",
+      "edad": 1,
+      "peso": "2.5",
+      "sexo": "F",
+      "fechanacimiento": "2022-11-19",
+      "id_dueno": 8
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 9,
+    "fields": {
+      "nombre": "Rocky",
+      "raza": "Husky",
+      "especie": "Perro",
+      "edad": 8,
+      "peso": "35.0",
+      "sexo": "M",
+      "fechanacimiento": "2016-12-01",
+      "id_dueno": 9
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 10,
+    "fields": {
+      "nombre": "Oliver",
+      "raza": "Maine Coon",
+      "especie": "Gato",
+      "edad": 4,
+      "peso": "5.0",
+      "sexo": "M",
+      "fechanacimiento": "2019-06-30",
+      "id_dueno": 10
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 11,
+    "fields": {
+      "nombre": "Simba",
+      "raza": "Ragdoll",
+      "especie": "Gato",
+      "edad": 5,
+      "peso": "6.0",
+      "sexo": "M",
+      "fechanacimiento": "2018-11-05",
+      "id_dueno": 11
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 12,
+    "fields": {
+      "nombre": "Daisy",
+      "raza": "Shih Tzu",
+      "especie": "Perro",
+      "edad": 2,
+      "peso": "8.0",
+      "sexo": "F",
+      "fechanacimiento": "2021-02-27",
+      "id_dueno": 12
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 13,
+    "fields": {
+      "nombre": "Lola",
+      "raza": "Poodle",
+      "especie": "Perro",
+      "edad": 3,
+      "peso": "7.5",
+      "sexo": "F",
+      "fechanacimiento": "2020-10-09",
+      "id_dueno": 13
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 14,
+    "fields": {
+      "nombre": "Nina",
+      "raza": "Sphynx",
+      "especie": "Gato",
+      "edad": 2,
+      "peso": "3.0",
+      "sexo": "F",
+      "fechanacimiento": "2021-12-25",
+      "id_dueno": 14
+    }
+  },
+  {
+    "model": "veterinaria.mascota",
+    "pk": 15,
+    "fields": {
+      "nombre": "Buddy",
+      "raza": "Golden Retriever",
+      "especie": "Perro",
+      "edad": 6,
+      "peso": "32.0",
+      "sexo": "M",
+      "fechanacimiento": "2018-08-18",
+      "id_dueno": 15
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 1,
+    "fields": {
+      "nombre": "Cirugía",
+      "descripcion": "Especialidad en procedimientos quirúrgicos"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 2,
+    "fields": {
+      "nombre": "Dermatología",
+      "descripcion": "Especialidad en problemas de la piel"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 3,
+    "fields": {
+      "nombre": "Cardiología",
+      "descripcion": "Especialidad en problemas del corazón"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 4,
+    "fields": {
+      "nombre": "Oftalmología",
+      "descripcion": "Especialidad en problemas de los ojos"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 5,
+    "fields": {
+      "nombre": "Neurología",
+      "descripcion": "Especialidad en problemas del sistema nervioso"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 6,
+    "fields": {
+      "nombre": "Ortopedia",
+      "descripcion": "Especialidad en problemas óseos y musculares"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 7,
+    "fields": {
+      "nombre": "Endocrinología",
+      "descripcion": "Especialidad en problemas hormonales"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 8,
+    "fields": {
+      "nombre": "Gastroenterología",
+      "descripcion": "Especialidad en problemas digestivos"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 9,
+    "fields": {
+      "nombre": "Oncología",
+      "descripcion": "Especialidad en cáncer y tumores"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 10,
+    "fields": {
+      "nombre": "Nefrología",
+      "descripcion": "Especialidad en problemas renales"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 11,
+    "fields": {
+      "nombre": "Urología",
+      "descripcion": "Especialidad en problemas urinarios"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 12,
+    "fields": {
+      "nombre": "Odontología",
+      "descripcion": "Especialidad en problemas dentales"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 13,
+    "fields": {
+      "nombre": "Rehabilitación",
+      "descripcion": "Especialidad en recuperación física"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 14,
+    "fields": {
+      "nombre": "Anestesiología",
+      "descripcion": "Especialidad en anestesia y manejo del dolor"
+    }
+  },
+  {
+    "model": "veterinaria.especialidad",
+    "pk": 15,
+    "fields": {
+      "nombre": "Nutrición",
+      "descripcion": "Especialidad en dietética y nutrición animal"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 1,
+    "fields": {
+      "nombre": "Ana",
+      "apellidos": "Martinez",
+      "id_especialidad": 1,
+      "telefono": "111222333",
+      "email": "ana.martinez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 2,
+    "fields": {
+      "nombre": "Luis",
+      "apellidos": "Fernandez",
+      "id_especialidad": 2,
+      "telefono": "444555666",
+      "email": "luis.fernandez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 3,
+    "fields": {
+      "nombre": "Elena",
+      "apellidos": "Diaz",
+      "id_especialidad": 3,
+      "telefono": "777888999",
+      "email": "elena.diaz@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 4,
+    "fields": {
+      "nombre": "Juan",
+      "apellidos": "Mendez",
+      "id_especialidad": 4,
+      "telefono": "121212121",
+      "email": "juan.mendez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 5,
+    "fields": {
+      "nombre": "Maria",
+      "apellidos": "Suarez",
+      "id_especialidad": 5,
+      "telefono": "343434343",
+      "email": "maria.suarez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 6,
+    "fields": {
+      "nombre": "Pedro",
+      "apellidos": "Lopez",
+      "id_especialidad": 6,
+      "telefono": "565656565",
+      "email": "pedro.lopez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 7,
+    "fields": {
+      "nombre": "Lucia",
+      "apellidos": "Perez",
+      "id_especialidad": 7,
+      "telefono": "787878787",
+      "email": "lucia.perez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 8,
+    "fields": {
+      "nombre": "Miguel",
+      "apellidos": "Gomez",
+      "id_especialidad": 8,
+      "telefono": "909090909",
+      "email": "miguel.gomez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 9,
+    "fields": {
+      "nombre": "Laura",
+      "apellidos": "Garcia",
+      "id_especialidad": 9,
+      "telefono": "232323232",
+      "email": "laura.garcia@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 10,
+    "fields": {
+      "nombre": "Jorge",
+      "apellidos": "Morales",
+      "id_especialidad": 10,
+      "telefono": "454545454",
+      "email": "jorge.morales@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 11,
+    "fields": {
+      "nombre": "Sofia",
+      "apellidos": "Vega",
+      "id_especialidad": 11,
+      "telefono": "676767676",
+      "email": "sofia.vega@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 12,
+    "fields": {
+      "nombre": "Raul",
+      "apellidos": "Jimenez",
+      "id_especialidad": 12,
+      "telefono": "898989898",
+      "email": "raul.jimenez@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 13,
+    "fields": {
+      "nombre": "Elena",
+      "apellidos": "Navas",
+      "id_especialidad": 13,
+      "telefono": "010101010",
+      "email": "elena.navas@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 14,
+    "fields": {
+      "nombre": "Diego",
+      "apellidos": "Zapata",
+      "id_especialidad": 14,
+      "telefono": "303030303",
+      "email": "diego.zapata@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.veterinario",
+    "pk": 15,
+    "fields": {
+      "nombre": "Julia",
+      "apellidos": "Rivas",
+      "id_especialidad": 15,
+      "telefono": "505050505",
+      "email": "julia.rivas@example.com"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 1,
+    "fields": {
+      "fecha": "2024-07-01",
+      "hora": "10:00:00",
+      "id_mascota": 1,
+      "id_dueno": 1,
+      "id_veterinario": 1,
+      "motivo": "Consulta general"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 2,
+    "fields": {
+      "fecha": "2024-07-02",
+      "hora": "11:30:00",
+      "id_mascota": 2,
+      "id_dueno": 2,
+      "id_veterinario": 2,
+      "motivo": "Chequeo dermatológico"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 3,
+    "fields": {
+      "fecha": "2024-07-03",
+      "hora": "09:00:00",
+      "id_mascota": 3,
+      "id_dueno": 3,
+      "id_veterinario": 3,
+      "motivo": "Revisión cardíaca"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 4,
+    "fields": {
+      "fecha": "2024-07-04",
+      "hora": "08:30:00",
+      "id_mascota": 4,
+      "id_dueno": 4,
+      "id_veterinario": 4,
+      "motivo": "Chequeo ocular"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 5,
+    "fields": {
+      "fecha": "2024-07-05",
+      "hora": "14:00:00",
+      "id_mascota": 5,
+      "id_dueno": 5,
+      "id_veterinario": 5,
+      "motivo": "Consulta neurológica"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 6,
+    "fields": {
+      "fecha": "2024-07-06",
+      "hora": "13:00:00",
+      "id_mascota": 6,
+      "id_dueno": 6,
+      "id_veterinario": 6,
+      "motivo": "Chequeo ortopédico"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 7,
+    "fields": {
+      "fecha": "2024-07-07",
+      "hora": "15:00:00",
+      "id_mascota": 7,
+      "id_dueno": 7,
+      "id_veterinario": 7,
+      "motivo": "Consulta endocrinológica"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 8,
+    "fields": {
+      "fecha": "2024-07-08",
+      "hora": "12:00:00",
+      "id_mascota": 8,
+      "id_dueno": 8,
+      "id_veterinario": 8,
+      "motivo": "Consulta gastrointestinal"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 9,
+    "fields": {
+      "fecha": "2024-07-09",
+      "hora": "16:00:00",
+      "id_mascota": 9,
+      "id_dueno": 9,
+      "id_veterinario": 9,
+      "motivo": "Consulta oncológica"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 10,
+    "fields": {
+      "fecha": "2024-07-10",
+      "hora": "10:30:00",
+      "id_mascota": 10,
+      "id_dueno": 10,
+      "id_veterinario": 10,
+      "motivo": "Consulta nefrológica"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 11,
+    "fields": {
+      "fecha": "2024-07-11",
+      "hora": "11:00:00",
+      "id_mascota": 11,
+      "id_dueno": 11,
+      "id_veterinario": 11,
+      "motivo": "Consulta urológica"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 12,
+    "fields": {
+      "fecha": "2024-07-12",
+      "hora": "14:30:00",
+      "id_mascota": 12,
+      "id_dueno": 12,
+      "id_veterinario": 12,
+      "motivo": "Chequeo dental"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 13,
+    "fields": {
+      "fecha": "2024-07-13",
+      "hora": "09:30:00",
+      "id_mascota": 13,
+      "id_dueno": 13,
+      "id_veterinario": 13,
+      "motivo": "Consulta de rehabilitación"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 14,
+    "fields": {
+      "fecha": "2024-07-14",
+      "hora": "08:00:00",
+      "id_mascota": 14,
+      "id_dueno": 14,
+      "id_veterinario": 14,
+      "motivo": "Consulta de anestesia"
+    }
+  },
+  {
+    "model": "veterinaria.cita",
+    "pk": 15,
+    "fields": {
+      "fecha": "2024-07-15",
+      "hora": "13:30:00",
+      "id_mascota": 15,
+      "id_dueno": 15,
+      "id_veterinario": 15,
+      "motivo": "Consulta nutricional"
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 1,
+    "fields": {
+      "descripcion": "Antibióticos para infección",
+      "dosis": "1 pastilla cada 8 horas",
+      "duracion": "7 días",
+      "fechainicio": "2024-07-01",
+      "fechafin": "2024-07-07",
+      "id_mascota": 1
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 2,
+    "fields": {
+      "descripcion": "Cremas para la piel",
+      "dosis": "Aplicar dos veces al día",
+      "duracion": "10 días",
+      "fechainicio": "2024-07-02",
+      "fechafin": "2024-07-12",
+      "id_mascota": 2
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 3,
+    "fields": {
+      "descripcion": "Medicamento para el corazón",
+      "dosis": "1 pastilla al día",
+      "duracion": "30 días",
+      "fechainicio": "2024-07-03",
+      "fechafin": "2024-08-02",
+      "id_mascota": 3
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 4,
+    "fields": {
+      "descripcion": "Gotas oculares",
+      "dosis": "3 gotas cada 6 horas",
+      "duracion": "5 días",
+      "fechainicio": "2024-07-04",
+      "fechafin": "2024-07-09",
+      "id_mascota": 4
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 5,
+    "fields": {
+      "descripcion": "Medicamento para el sistema nervioso",
+      "dosis": "2 pastillas al día",
+      "duracion": "15 días",
+      "fechainicio": "2024-07-05",
+      "fechafin": "2024-07-20",
+      "id_mascota": 5
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 6,
+    "fields": {
+      "descripcion": "Suplemento para articulaciones",
+      "dosis": "1 pastilla al día",
+      "duracion": "30 días",
+      "fechainicio": "2024-07-06",
+      "fechafin": "2024-08-05",
+      "id_mascota": 6
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 7,
+    "fields": {
+      "descripcion": "Hormonas tiroideas",
+      "dosis": "1 pastilla al día",
+      "duracion": "90 días",
+      "fechainicio": "2024-07-07",
+      "fechafin": "2024-10-05",
+      "id_mascota": 7
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 8,
+    "fields": {
+      "descripcion": "Medicamento digestivo",
+      "dosis": "1 pastilla cada 12 horas",
+      "duracion": "20 días",
+      "fechainicio": "2024-07-08",
+      "fechafin": "2024-07-28",
+      "id_mascota": 8
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 9,
+    "fields": {
+      "descripcion": "Quimioterapia",
+      "dosis": "Inyección cada semana",
+      "duracion": "12 semanas",
+      "fechainicio": "2024-07-09",
+      "fechafin": "2024-09-25",
+      "id_mascota": 9
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 10,
+    "fields": {
+      "descripcion": "Diurético",
+      "dosis": "1 pastilla cada 8 horas",
+      "duracion": "14 días",
+      "fechainicio": "2024-07-10",
+      "fechafin": "2024-07-24",
+      "id_mascota": 10
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 11,
+    "fields": {
+      "descripcion": "Antibiótico para infección urinaria",
+      "dosis": "1 pastilla cada 12 horas",
+      "duracion": "10 días",
+      "fechainicio": "2024-07-11",
+      "fechafin": "2024-07-21",
+      "id_mascota": 11
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 12,
+    "fields": {
+      "descripcion": "Limpieza dental",
+      "dosis": "Aplicar gel cada 12 horas",
+      "duracion": "7 días",
+      "fechainicio": "2024-07-12",
+      "fechafin": "2024-07-19",
+      "id_mascota": 12
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 13,
+    "fields": {
+      "descripcion": "Fisioterapia",
+      "dosis": "Ejercicios diarios",
+      "duracion": "30 días",
+      "fechainicio": "2024-07-13",
+      "fechafin": "2024-08-12",
+      "id_mascota": 13
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 14,
+    "fields": {
+      "descripcion": "Anestesia general",
+      "dosis": "Dosis única",
+      "duracion": "Procedimiento",
+      "fechainicio": "2024-07-14",
+      "fechafin": "2024-07-14",
+      "id_mascota": 14
+    }
+  },
+  {
+    "model": "veterinaria.tratamiento",
+    "pk": 15,
+    "fields": {
+      "descripcion": "Dieta especializada",
+      "dosis": "1 vez al día",
+      "duracion": "60 días",
+      "fechainicio": "2024-07-15",
+      "fechafin": "2024-09-13",
+      "id_mascota": 15
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 1,
+    "fields": {
+      "fecha": "2024-07-01",
+      "id_cita": 1,
+      "id_dueno": 1,
+      "total": "150.00",
+      "pagado": false
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 2,
+    "fields": {
+      "fecha": "2024-07-02",
+      "id_cita": 2,
+      "id_dueno": 2,
+      "total": "200.00",
+      "pagado": true
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 3,
+    "fields": {
+      "fecha": "2024-07-03",
+      "id_cita": 3,
+      "id_dueno": 3,
+      "total": "300.00",
+      "pagado": false
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 4,
+    "fields": {
+      "fecha": "2024-07-04",
+      "id_cita": 4,
+      "id_dueno": 4,
+      "total": "180.00",
+      "pagado": true
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 5,
+    "fields": {
+      "fecha": "2024-07-05",
+      "id_cita": 5,
+      "id_dueno": 5,
+      "total": "250.00",
+      "pagado": false
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 6,
+    "fields": {
+      "fecha": "2024-07-06",
+      "id_cita": 6,
+      "id_dueno": 6,
+      "total": "220.00",
+      "pagado": true
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 7,
+    "fields": {
+      "fecha": "2024-07-07",
+      "id_cita": 7,
+      "id_dueno": 7,
+      "total": "270.00",
+      "pagado": false
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 8,
+    "fields": {
+      "fecha": "2024-07-08",
+      "id_cita": 8,
+      "id_dueno": 8,
+      "total": "230.00",
+      "pagado": true
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 9,
+    "fields": {
+      "fecha": "2024-07-09",
+      "id_cita": 9,
+      "id_dueno": 9,
+      "total": "310.00",
+      "pagado": false
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 10,
+    "fields": {
+      "fecha": "2024-07-10",
+      "id_cita": 10,
+      "id_dueno": 10,
+      "total": "190.00",
+      "pagado": true
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 11,
+    "fields": {
+      "fecha": "2024-07-11",
+      "id_cita": 11,
+      "id_dueno": 11,
+      "total": "210.00",
+      "pagado": false
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 12,
+    "fields": {
+      "fecha": "2024-07-12",
+      "id_cita": 12,
+      "id_dueno": 12,
+      "total": "160.00",
+      "pagado": true
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 13,
+    "fields": {
+      "fecha": "2024-07-13",
+      "id_cita": 13,
+      "id_dueno": 13,
+      "total": "240.00",
+      "pagado": false
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 14,
+    "fields": {
+      "fecha": "2024-07-14",
+      "id_cita": 14,
+      "id_dueno": 14,
+      "total": "140.00",
+      "pagado": true
+    }
+  },
+  {
+    "model": "veterinaria.facturacion",
+    "pk": 15,
+    "fields": {
+      "fecha": "2024-07-15",
+      "id_cita": 15,
+      "id_dueno": 15,
+      "total": "280.00",
+      "pagado": false
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 1,
+    "fields": {
+      "fecha": "2024-07-01",
+      "hora": "10:00:00",
+      "diagnostico": "Infección bacteriana",
+      "observaciones": "Se receta antibiótico",
+      "id_cita": 1,
+      "id_veterinario": 1
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 2,
+    "fields": {
+      "fecha": "2024-07-02",
+      "hora": "11:30:00",
+      "diagnostico": "Dermatitis",
+      "observaciones": "Se receta crema",
+      "id_cita": 2,
+      "id_veterinario": 2
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 3,
+    "fields": {
+      "fecha": "2024-07-03",
+      "hora": "09:00:00",
+      "diagnostico": "Problema cardíaco",
+      "observaciones": "Se receta medicamento",
+      "id_cita": 3,
+      "id_veterinario": 3
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 4,
+    "fields": {
+      "fecha": "2024-07-04",
+      "hora": "08:30:00",
+      "diagnostico": "Conjuntivitis",
+      "observaciones": "Se receta gotas",
+      "id_cita": 4,
+      "id_veterinario": 4
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 5,
+    "fields": {
+      "fecha": "2024-07-05",
+      "hora": "14:00:00",
+      "diagnostico": "Epilepsia",
+      "observaciones": "Se receta medicamento",
+      "id_cita": 5,
+      "id_veterinario": 5
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 6,
+    "fields": {
+      "fecha": "2024-07-06",
+      "hora": "13:00:00",
+      "diagnostico": "Artritis",
+      "observaciones": "Se receta suplemento",
+      "id_cita": 6,
+      "id_veterinario": 6
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 7,
+    "fields": {
+      "fecha": "2024-07-07",
+      "hora": "15:00:00",
+      "diagnostico": "Hipotiroidismo",
+      "observaciones": "Se receta hormonas",
+      "id_cita": 7,
+      "id_veterinario": 7
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 8,
+    "fields": {
+      "fecha": "2024-07-08",
+      "hora": "12:00:00",
+      "diagnostico": "Gastritis",
+      "observaciones": "Se receta medicamento",
+      "id_cita": 8,
+      "id_veterinario": 8
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 9,
+    "fields": {
+      "fecha": "2024-07-09",
+      "hora": "16:00:00",
+      "diagnostico": "Tumor",
+      "observaciones": "Se inicia quimioterapia",
+      "id_cita": 9,
+      "id_veterinario": 9
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 10,
+    "fields": {
+      "fecha": "2024-07-10",
+      "hora": "10:30:00",
+      "diagnostico": "Insuficiencia renal",
+      "observaciones": "Se receta diurético",
+      "id_cita": 10,
+      "id_veterinario": 10
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 11,
+    "fields": {
+      "fecha": "2024-07-11",
+      "hora": "11:00:00",
+      "diagnostico": "Infección urinaria",
+      "observaciones": "Se receta antibiótico",
+      "id_cita": 11,
+      "id_veterinario": 11
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 12,
+    "fields": {
+      "fecha": "2024-07-12",
+      "hora": "14:30:00",
+      "diagnostico": "Problemas dentales",
+      "observaciones": "Se receta gel dental",
+      "id_cita": 12,
+      "id_veterinario": 12
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 13,
+    "fields": {
+      "fecha": "2024-07-13",
+      "hora": "09:30:00",
+      "diagnostico": "Fractura",
+      "observaciones": "Se inicia fisioterapia",
+      "id_cita": 13,
+      "id_veterinario": 13
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 14,
+    "fields": {
+      "fecha": "2024-07-14",
+      "hora": "08:00:00",
+      "diagnostico": "Cirugía programada",
+      "observaciones": "Se realiza anestesia general",
+      "id_cita": 14,
+      "id_veterinario": 14
+    }
+  },
+  {
+    "model": "veterinaria.consulta",
+    "pk": 15,
+    "fields": {
+      "fecha": "2024-07-15",
+      "hora": "13:30:00",
+      "diagnostico": "Obesidad",
+      "observaciones": "Se inicia dieta especializada",
+      "id_cita": 15,
+      "id_veterinario": 15
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 1,
+    "fields": {
+      "fechaingreso": "2024-07-01",
+      "fechaalta": "2024-07-05",
+      "motivo": "Infección grave",
+      "id_mascota": 1,
+      "id_veterinario": 1
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 2,
+    "fields": {
+      "fechaingreso": "2024-07-02",
+      "fechaalta": "2024-07-06",
+      "motivo": "Dermatitis severa",
+      "id_mascota": 2,
+      "id_veterinario": 2
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 3,
+    "fields": {
+      "fechaingreso": "2024-07-03",
+      "fechaalta": "2024-07-07",
+      "motivo": "Problema cardíaco",
+      "id_mascota": 3,
+      "id_veterinario": 3
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 4,
+    "fields": {
+      "fechaingreso": "2024-07-04",
+      "fechaalta": "2024-07-08",
+      "motivo": "Conjuntivitis severa",
+      "id_mascota": 4,
+      "id_veterinario": 4
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 5,
+    "fields": {
+      "fechaingreso": "2024-07-05",
+      "fechaalta": "2024-07-09",
+      "motivo": "Epilepsia grave",
+      "id_mascota": 5,
+      "id_veterinario": 5
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 6,
+    "fields": {
+      "fechaingreso": "2024-07-06",
+      "fechaalta": "2024-07-10",
+      "motivo": "Artritis severa",
+      "id_mascota": 6,
+      "id_veterinario": 6
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 7,
+    "fields": {
+      "fechaingreso": "2024-07-07",
+      "fechaalta": "2024-07-11",
+      "motivo": "Hipotiroidismo grave",
+      "id_mascota": 7,
+      "id_veterinario": 7
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 8,
+    "fields": {
+      "fechaingreso": "2024-07-08",
+      "fechaalta": "2024-07-12",
+      "motivo": "Gastritis severa",
+      "id_mascota": 8,
+      "id_veterinario": 8
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 9,
+    "fields": {
+      "fechaingreso": "2024-07-09",
+      "fechaalta": "2024-07-13",
+      "motivo": "Tumor maligno",
+      "id_mascota": 9,
+      "id_veterinario": 9
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 10,
+    "fields": {
+      "fechaingreso": "2024-07-10",
+      "fechaalta": "2024-07-14",
+      "motivo": "Insuficiencia renal",
+      "id_mascota": 10,
+      "id_veterinario": 10
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 11,
+    "fields": {
+      "fechaingreso": "2024-07-11",
+      "fechaalta": "2024-07-15",
+      "motivo": "Infección urinaria grave",
+      "id_mascota": 11,
+      "id_veterinario": 11
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 12,
+    "fields": {
+      "fechaingreso": "2024-07-12",
+      "fechaalta": "2024-07-16",
+      "motivo": "Problemas dentales graves",
+      "id_mascota": 12,
+      "id_veterinario": 12
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 13,
+    "fields": {
+      "fechaingreso": "2024-07-13",
+      "fechaalta": "2024-07-17",
+      "motivo": "Fractura compleja",
+      "id_mascota": 13,
+      "id_veterinario": 13
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 14,
+    "fields": {
+      "fechaingreso": "2024-07-14",
+      "fechaalta": "2024-07-18",
+      "motivo": "Cirugía mayor",
+      "id_mascota": 14,
+      "id_veterinario": 14
+    }
+  },
+  {
+    "model": "veterinaria.hospitalizacion",
+    "pk": 15,
+    "fields": {
+      "fechaingreso": "2024-07-15",
+      "fechaalta": "2024-07-19",
+      "motivo": "Obesidad severa",
+      "id_mascota": 15,
+      "id_veterinario": 15
+    }
+  }
+]
