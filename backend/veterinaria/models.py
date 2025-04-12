@@ -10,7 +10,6 @@ class Cirugia(models.Model):
     id_veterinario = models.ForeignKey('Veterinario', on_delete=models.DO_NOTHING, db_column='ID_Veterinario')
 
     class Meta:
-        managed = False
         db_table = 'Cirugia'
 
 class Cita(models.Model):
@@ -23,7 +22,6 @@ class Cita(models.Model):
     motivo = models.CharField(max_length=100, blank=True, null=True, db_column='Motivo')
 
     class Meta:
-        managed = False
         db_table = 'Cita'
 
 class Consulta(models.Model):
@@ -36,7 +34,6 @@ class Consulta(models.Model):
     id_veterinario = models.ForeignKey('Veterinario', on_delete=models.DO_NOTHING, db_column='ID_Veterinario')
 
     class Meta:
-        managed = False
         db_table = 'Consulta'
 
 class Dueno(models.Model):
@@ -48,7 +45,6 @@ class Dueno(models.Model):
     email = models.CharField(max_length=50, blank=True, null=True, db_column='Email')
 
     class Meta:
-        managed = False
         db_table = 'Dueno'
 
 class Especialidad(models.Model):
@@ -57,7 +53,6 @@ class Especialidad(models.Model):
     descripcion = models.CharField(max_length=200, blank=True, null=True, db_column='Descripcion')
 
     class Meta:
-        managed = False
         db_table = 'Especialidad'
 
 class Facturacion(models.Model):
@@ -69,7 +64,6 @@ class Facturacion(models.Model):
     pagado = models.BooleanField(default=False, db_column='Pagado')
 
     class Meta:
-        managed = False
         db_table = 'Facturacion'
 
 class Hospitalizacion(models.Model):
@@ -81,7 +75,6 @@ class Hospitalizacion(models.Model):
     id_veterinario = models.ForeignKey('Veterinario', on_delete=models.DO_NOTHING, db_column='ID_Veterinario')
 
     class Meta:
-        managed = False
         db_table = 'Hospitalizacion'
 
 class Mascota(models.Model):
@@ -96,7 +89,6 @@ class Mascota(models.Model):
     id_dueno = models.ForeignKey(Dueno, on_delete=models.DO_NOTHING, db_column='ID_Dueno')
 
     class Meta:
-        managed = False
         db_table = 'Mascota'
 
 class Tratamiento(models.Model):
@@ -109,7 +101,6 @@ class Tratamiento(models.Model):
     id_mascota = models.ForeignKey(Mascota, on_delete=models.DO_NOTHING, db_column='ID_Mascota')
 
     class Meta:
-        managed = False
         db_table = 'Tratamiento'
 
 class Veterinario(models.Model):
@@ -121,5 +112,4 @@ class Veterinario(models.Model):
     email = models.CharField(max_length=50, blank=True, null=True, db_column='Email')
 
     class Meta:
-        managed = False
         db_table = 'Veterinario'

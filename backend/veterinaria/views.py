@@ -209,3 +209,9 @@ def generar_reporte(request):
         form = ReporteForm()
 
     return render(request, 'reporte_form.html', {'form': form})
+
+
+from django.http import JsonResponse
+
+def ping(request):
+    return JsonResponse({"message": "pong"})

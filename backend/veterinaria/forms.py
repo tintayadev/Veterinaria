@@ -17,17 +17,19 @@ class ReporteForm(forms.Form):
     fecha_inicio = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
     fecha_fin = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
     
-    # Obtener todas las especies únicas de las mascotas
-    especies = Mascota.objects.values('especie').distinct()
-
-    # Crear la lista de opciones para el campo tipo_mascota
-    tipo_mascota_choices = [(especie['especie'], especie['especie']) for especie in especies]
-
-    # Agregar la opción por defecto (vacía)
-    tipo_mascota_choices.insert(0, ('', 'Seleccione una especie'))
-
     tipo_mascota = forms.ChoiceField(
         required=False,
-        choices=tipo_mascota_choices,
+        choices=[],
         widget=forms.Select(attrs={'class': 'form-control'})
     )
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        try:
+            especies = Mascota.objects.values_list('especie', flat=True).distinct()
+            choices = [(especie, especie) for especie in especies]
+            choices.insert(0, ('', 'Seleccione una especie'))
+            self.fields['tipo_mascota'].choices = choices
+        except Exception:
+            # Si la tabla aún no existe, dejamos la lista vacía para evitar errores
+            self.fields['tipo_mascota'].choices = [('', 'Seleccione una especie')]

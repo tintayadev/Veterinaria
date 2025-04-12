@@ -1,9 +1,18 @@
 -- Habilitar claves foráneas
 PRAGMA foreign_keys = ON;
+-- PostgreSQL enforces foreign keys by default
 
--- Crear la tabla Mascota
+CREATE TABLE Dueno (
+    ID_Dueno SERIAL PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellidos VARCHAR(50) NOT NULL,
+    Telefono VARCHAR(20),
+    Direccion VARCHAR(100),
+    Email VARCHAR(50)
+);
+
 CREATE TABLE Mascota (
-    ID_Mascota INTEGER PRIMARY KEY AUTOINCREMENT,
+    ID_Mascota SERIAL PRIMARY KEY,
     Nombre VARCHAR(50) NOT NULL,
     Raza VARCHAR(50),
     Especie VARCHAR(50) NOT NULL,
@@ -15,19 +24,24 @@ CREATE TABLE Mascota (
     FOREIGN KEY (ID_Dueno) REFERENCES Dueno(ID_Dueno)
 );
 
--- Crear la tabla Dueno
-CREATE TABLE Dueno (
-    ID_Dueno INTEGER PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE Especialidad (
+    ID_Especialidad SERIAL PRIMARY KEY,
     Nombre VARCHAR(50) NOT NULL,
-    Apellidos VARCHAR(50) NOT NULL,
-    Telefono VARCHAR(20),
-    Direccion VARCHAR(100),
-    Email VARCHAR(50)
+    Descripcion VARCHAR(200)
 );
 
--- Crear la tabla Cita
+CREATE TABLE Veterinario (
+    ID_Veterinario SERIAL PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellidos VARCHAR(50) NOT NULL,
+    ID_Especialidad INT NOT NULL,
+    Telefono VARCHAR(20),
+    Email VARCHAR(50),
+    FOREIGN KEY (ID_Especialidad) REFERENCES Especialidad(ID_Especialidad)
+);
+
 CREATE TABLE Cita (
-    ID_Cita INTEGER PRIMARY KEY AUTOINCREMENT,
+    ID_Cita SERIAL PRIMARY KEY,
     Fecha DATE NOT NULL,
     Hora TIME NOT NULL,
     ID_Mascota INT NOT NULL,
@@ -39,9 +53,8 @@ CREATE TABLE Cita (
     FOREIGN KEY (ID_Veterinario) REFERENCES Veterinario(ID_Veterinario)
 );
 
--- Crear la tabla Tratamiento
 CREATE TABLE Tratamiento (
-    ID_Tratamiento INTEGER PRIMARY KEY AUTOINCREMENT,
+    ID_Tratamiento SERIAL PRIMARY KEY,
     Descripcion VARCHAR(200) NOT NULL,
     Dosis VARCHAR(50),
     Duracion VARCHAR(50),
@@ -51,9 +64,8 @@ CREATE TABLE Tratamiento (
     FOREIGN KEY (ID_Mascota) REFERENCES Mascota(ID_Mascota)
 );
 
--- Crear la tabla Facturacion
 CREATE TABLE Facturacion (
-    ID_Factura INTEGER PRIMARY KEY AUTOINCREMENT,
+    ID_Factura SERIAL PRIMARY KEY,
     Fecha DATE NOT NULL,
     ID_Cita INT NOT NULL,
     ID_Dueno INT NOT NULL,
@@ -63,27 +75,8 @@ CREATE TABLE Facturacion (
     FOREIGN KEY (ID_Dueno) REFERENCES Dueno(ID_Dueno)
 );
 
--- Crear la tabla Especialidad
-CREATE TABLE Especialidad (
-    ID_Especialidad INTEGER PRIMARY KEY AUTOINCREMENT,
-    Nombre VARCHAR(50) NOT NULL,
-    Descripcion VARCHAR(200)
-);
-
--- Crear la tabla Veterinario
-CREATE TABLE Veterinario (
-    ID_Veterinario INTEGER PRIMARY KEY AUTOINCREMENT,
-    Nombre VARCHAR(50) NOT NULL,
-    Apellidos VARCHAR(50) NOT NULL,
-    ID_Especialidad INT NOT NULL,
-    Telefono VARCHAR(20),
-    Email VARCHAR(50),
-    FOREIGN KEY (ID_Especialidad) REFERENCES Especialidad(ID_Especialidad)
-);
-
--- Crear la tabla Consulta
 CREATE TABLE Consulta (
-    ID_Consulta INTEGER PRIMARY KEY AUTOINCREMENT,
+    ID_Consulta SERIAL PRIMARY KEY,
     Fecha DATE NOT NULL,
     Hora TIME NOT NULL,
     Diagnostico VARCHAR(200),
@@ -94,9 +87,8 @@ CREATE TABLE Consulta (
     FOREIGN KEY (ID_Veterinario) REFERENCES Veterinario(ID_Veterinario)
 );
 
--- Crear la tabla Cirugia
 CREATE TABLE Cirugia (
-    ID_Cirugia INTEGER PRIMARY KEY AUTOINCREMENT,
+    ID_Cirugia SERIAL PRIMARY KEY,
     Fecha DATE NOT NULL,
     Tipo VARCHAR(50) NOT NULL,
     Descripcion VARCHAR(200),
@@ -106,17 +98,17 @@ CREATE TABLE Cirugia (
     FOREIGN KEY (ID_Veterinario) REFERENCES Veterinario(ID_Veterinario)
 );
 
--- Crear la tabla Hospitalizacion
 CREATE TABLE Hospitalizacion (
     ID_Hospitalizacion SERIAL PRIMARY KEY,
     FechaIngreso DATE NOT NULL,
     FechaAlta DATE,
     Motivo VARCHAR(200),
     ID_Mascota INT NOT NULL,
-    ID_Veterinario INT NOT NULL,  -- Agregar la columna ID_Veterinario
+    ID_Veterinario INT NOT NULL,
     FOREIGN KEY (ID_Mascota) REFERENCES Mascota(ID_Mascota),
     FOREIGN KEY (ID_Veterinario) REFERENCES Veterinario(ID_Veterinario)
 );
+
 
 -- Insertar datos en la tabla Dueno
 INSERT INTO Dueno (Nombre, Apellidos, Telefono, Direccion, Email) VALUES 
